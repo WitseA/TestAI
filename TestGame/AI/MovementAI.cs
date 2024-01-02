@@ -14,7 +14,8 @@ namespace TestGame.AI
         #region Properties
         public Player Target { get; set; }
         public Vector2 GuardCrd { get; set; }
-        public float Distance { get; set; }
+        public float GuardDistance { get; set; }
+        public float SWDistance { get; set; }
         public string CurrentPattern { get; private set; }
 
         private readonly List<Vector2> _path = new();
@@ -54,7 +55,7 @@ namespace TestGame.AI
             var toTarget = (GuardCrd - Target.Position).Length();
             Vector2 dir;
 
-            if (toTarget < Distance)
+            if (toTarget < GuardDistance)
             {
                 dir = Target.Position - bot.Position;
             }
@@ -88,12 +89,12 @@ namespace TestGame.AI
             var dir = Target.Position - bot.Position;
             var length = dir.Length();
 
-            if (length > Distance + 2)
+            if (length > SWDistance + 2)
             {
                 dir.Normalize();
                 bot.Position += dir * bot.Speed * Globals.TotalSeconds;
             }
-            else if (length < Distance - 2)
+            else if (length < SWDistance - 2)
             {
                 dir.Normalize();
                 bot.Position -= dir * bot.Speed * Globals.TotalSeconds;

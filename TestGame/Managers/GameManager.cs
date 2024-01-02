@@ -19,7 +19,9 @@ namespace TestGame.Managers
             var botTexture = Globals.Content.Load<Texture2D>("square");
 
             ai.GuardCrd = new Vector2(300,300); // Set GuardCrd
-            ai.Distance = 125f;
+            ai.GuardDistance = 200f;
+            ai.SWDistance = 150f;
+            
             
             List<Vector2> aiList = new List<Vector2>
             {
