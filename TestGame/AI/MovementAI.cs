@@ -26,9 +26,9 @@ namespace TestGame.AI
         {
             _path.Add(wp);
         }
-                public void ChangeMovementPattern(string newPattern)
+        public void ChangeMovementPattern(string newPattern)
         {
-            CurrentPattern = newPattern;
+            CurrentPattern = newPattern.ToLower();
         }
 
         #region AI_Movements

@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/School/2023-2024/S1/GameDev/TestGame/TestGame/Content/square.png</File>
+    <File>C:/Users/32494/Documents/school/23-24/S1/GameDev/TestAI/TestGame/Content/square.png</File>
   </SourceFiles>
   <DestFiles>
     <File>square</File>
